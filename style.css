@@ -147,4 +147,5 @@ h2{
     display: flex;
     justify-content: space-between ;
     color: white;
+    cursor: pointer;
 }
