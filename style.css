@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+body{
+    background-color: hsl(222, 26%, 31%);
+    font-family: 'League Spartan';
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+.screen{
+    width: 300px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+ .screen #screen{
+    width: 100%;
+    height: 100%;
+    background-color:  hsl(223, 31%, 20%);
+    text-align: right;
+    margin: 0;
+    color: white;
+    font-size: x-larged;
+}
+input{
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    outline: none;
+}
+input[type=radio]{
+    display: none;
+}
+label{
+    margin: 0 7px;
+}
+p{
+    margin: 30px 10px;
+}
+h2{
+    margin: 25px 0;
+}
+.toggle{
+    width: 70px;
+    background-color:  hsl(223, 31%, 20%);
+    padding: 10px;
+    display: block;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 10px;
+}
+.toggle::after{
+    content: '';
+    width: 2px;
+    background-color: hsl(6, 63%, 50%);
+    position: absolute;
+    padding: 8px;
+    border-radius: 50%;
+    top: 2px;
+    left: 3px;
+}
+#toggle1:checked ~ .toggle{
+    background-color: hsl(223, 31%, 20%);
+}
+#toggle1:checked ~ .toggle::after{
+    background-color: hsl(6, 63%, 50%);
+    transform: translateX(0px);
+    transition: all 0.6s;
+}
+#toggle2:checked ~ .toggle{
+    background-color:  hsl(0, 5%, 81%);
+}
+#toggle2:checked ~ .toggle::after{
+    background-color:  hsl(25, 98%, 40%);
+    transform: translateX(20px);
+    transition: all 0.6s;
+}
+#toggle3:checked ~ .toggle{
+    background-color: hsl(268, 71%, 12%);
+}
+#toggle3:checked ~ .toggle::after{
+    background-color:  hsl(176, 100%, 44%);
+    transform: translateX(44px);
+    transition: all 0.6s;
+}
+#themes{
+    display: flex;
+}
+#themes div{
+    margin: 0 10px;
+}
+.content{
+    width: 300px;
+    height: 250px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 5px;
+    padding: 10px;
+}
+.inputs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 80%;
+}
+.inputs input{
+    box-shadow: 0px 3px 0px 0px  hsl(28, 16%, 65%);
+    background-color:  hsl(30, 25%, 89%);
+    color:  hsl(225, 21%, 49%);
+}
+.clear{
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.blue,.inputs .blue{
+    background-color:   hsl(225, 21%, 49%);
+    color: white;
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%) ;
+}
+#red{
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 2px 0px 0px hsl(6, 70%, 34%);
+    color: white;
+}
+.inputs input:hover{
+    background-color: white;
+    color: black;
+}
+.blue:hover,.inputs .blue:hover{
+    color: white;
+}
+#red:hover{
+    background-color:  hsl(6, 70%, 34%);
+}
+.themes{
+    display: flex;
+    justify-content: space-between ;
+    color: white;
+}
